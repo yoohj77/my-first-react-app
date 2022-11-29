@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import TopButton from './component/Topbutton';
+import Contents from './layout/Contents';
+import { useState } from 'react';
+import Toolbar from './layout/LeftToolbar';
+
+
 function App() {
+  const [isClose, setIsClose] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      {isClose ? '' :
+        <div>
+          <TopButton closeEvent={setIsClose} />
+          <Toolbar />
+        </div>}
+
+      <div className='App-contents'>
+        <Contents closeEvent={setIsClose} isClosed={isClose} />
+      </div>
+    </div >
   );
 }
 

@@ -1,5 +1,69 @@
 .App {
   text-align: center;
+  display: flex;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.App-leftView {
+  width: 240px;
+  height: 100vh;
+  color: grey;
+  border-top: 1px solid lightgrey;
+  overflow-y: auto;
+}
+
+
+.App-toolbar {
+  width: 100%;
+  margin-top: 5px;
+  content: 'row';
+  display: flex;
+  background: none;
+}
+
+.App-toolbar:hover {
+  background: lightgrey;
+}
+
+.App-drawerButton {
+  margin-left: 10px;
+}
+
+.App-drawerButton:hover {
+  background-color: #333;
+}
+
+
+.App-contents {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.App-topButtonLayer {
+  height: 50px;
+  text-align: right;
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+  padding: 5px
+}
+
+.App-topButton:hover {
+  background: lightgrey;
+  border-radius: 50%
+}
+
+
+.App-header {
+  color: white;
+  background-color: #1976d2;
+  height: 72px;
+  text-align: initial;
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+
 }
 
 .App-logo {
@@ -13,16 +77,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
 .App-link {
   color: #61dafb;
@@ -32,6 +86,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
