@@ -14,7 +14,7 @@ function Header(props: HeaderProps) {
             < div style={{ marginLeft: '10px' }}>
                 Drawer
             </div >
-        </div >
+        </div > 
     );
 }
 
